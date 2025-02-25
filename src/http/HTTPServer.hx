@@ -59,7 +59,7 @@ class HTTPServer extends SocketServer {
 			var client:Socket = Thread.readMessage(true);
 			try {
 				var head = onHeaderRoute(client.input.readLine());
-				if (head.indexOf("GET") == 0 || head.indexOf("POST") == 0 || head.indexOf("OPTIONS") == 0) {
+				if (head.indexOf("GET") == 0 || head.indexOf("POST") == 0 || head.indexOf("OPTIONS") == 0 || head.indexOf("PUT") == 0 || head.indexOf("DELETE") == 0) {
 					var http = new HTTPRequest(client, this, head);
 					route.callRoute(http.path, http);
 					onConnectRequest(http);

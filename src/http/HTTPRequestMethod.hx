@@ -18,4 +18,14 @@ enum abstract HTTPRequestMethod(String) to String from String {
 	 * 预检请求
 	 */
 	var OPTIONS = "OPTIONS";
+
+	/**
+	 * PUT
+	 */
+	 var PUT = "PUT";
+
+	/**
+	 * DELETE
+	 */
+	var DELETE = "DELETE";
 }
